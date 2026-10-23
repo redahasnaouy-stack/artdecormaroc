@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="ArtDecor : objets de décoration, luminaires et pièces choisies pour un intérieur qui vous ressemble."
+    />
+    <title>ArtDecor — L’art d’habiter</title>
+    <meta name="theme-color" content="#3f2852" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      De belles pièces. Un intérieur singulier.
+      <span>Livraison au Maroc · Paiement à la livraison</span>
+    </div>
+    <header>
+      <a class="logo" href="/" aria-label="ArtDecor, accueil"
+        ><span class="brand-mark" aria-hidden="true">A<span>✦</span></span
+        >Art<span>Decor</span><i>LA MAISON, AUTREMENT</i></a
+      >
+      <nav aria-label="Navigation principale">
+        <a href="#collection">La collection</a
+        ><a href="#inspiration">L’esprit ArtDecor</a
+        ><a href="#engagements">À votre service</a>
+      </nav>
+      <a class="header-collection" href="#collection"
+        >Explorer
+        <span aria-hidden="true"
+          ><span class="icon-arrow" aria-hidden="true"></span></span
+      ></a>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> L’ART DE SE SENTIR CHEZ SOI</div>
+          <h1>
+            Du caractère.<br />De la douceur.<br /><em>Votre signature.</em>
+          </h1>
+          <p>
+            Des pièces singulières pour les intérieurs qui ont quelque chose à
+            raconter. Composez le vôtre, un détail à la fois.
+          </p>
+          <a class="button mauve" href="#collection"
+            >Explorer la collection
+            <span aria-hidden="true"
+              ><span class="icon-arrow" aria-hidden="true"></span></span
+          ></a>
+          <div class="hero-note">
+            <span class="note-line"></span>Objets choisis. Instants à vivre.
+          </div>
+          <div class="hero-index"><span>01 /</span> LA MAISON, AUTREMENT</div>
+        </div>
+        <div class="hero-art">
+          <img
+            fetchpriority="high"
+            src="/assets/story.jpg"
+            alt="Intérieur lumineux et chaleureux, aux matières naturelles"
+          />
+          <div class="image-caption">
+            <span>LES DÉTAILS CHANGENT TOUT.</span
+            ><span>ARTDECOR — INTÉRIEURS</span>
+          </div>
+          <div class="floating-label">
+            <span class="label-star" aria-hidden="true">✦</span>
+            <div>
+              Le beau se vit.<br /><em>Il ne se regarde pas seulement.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="values-strip">
+        <span
+          ><b aria-hidden="true"
+            ><span class="icon-arrow" aria-hidden="true"></span
+          ></b>
+          Livraison partout au Maroc</span
+        ><span><b aria-hidden="true">◇</b> Paiement à la livraison</span
+        ><span><b aria-hidden="true">✦</b> Livraison offerte dès 800 DH</span>
+      </div>
+      <section id="collection" class="collection">
+        <div class="section-top">
+          <div class="eyebrow">LA COLLECTION — ARTDECOR</div>
+          <span>Des objets, beaucoup de personnalité.</span>
+        </div>
+        <div class="collection-title">
+          <h2>Votre prochain<br /><em>coup de cœur.</em></h2>
+          <p>
+            Une sélection pour donner du relief à votre quotidien.<br />Trouvez
+            la pièce qui fera toute la différence.
+          </p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filters" id="filters"></div>
+          <label class="search"
+            >⌕
+            <input
+              id="search"
+              placeholder="Chercher une pièce…"
+              aria-label="Rechercher un produit" /></label
+          ><select id="sort" aria-label="Trier">
+            <option value="default">Notre sélection</option>
+            <option value="asc">Prix croissant</option>
+            <option value="desc">Prix décroissant</option>
+          </select>
+        </div>
+        <p class="demo-note">
+          Choisissez une pièce, découvrez ses détails et commandez directement.
+        </p>
+        <div id="products" class="products"></div>
+        <div class="collection-bottom">
+          Des objets à aimer. Des espaces à réinventer. <span>✦</span>
+        </div>
+      </section>
+      <section id="inspiration" class="story">
+        <div class="story-image">
+          <img
+            loading="lazy"
+            src="/assets/hero.jpg"
+            alt="Salon aux matières naturelles et aux touches chaleureuses"
+          /><span>LA BEAUTÉ EST DANS LES DÉTAILS.</span>
+        </div>
+        <div class="story-copy">
+          <div class="eyebrow">L’ESPRIT ARTDECOR</div>
+          <h2>Pas juste un lieu.<br /><em>Votre univers.</em></h2>
+          <p>
+            On aime les objets qui réchauffent une pièce. Ceux qu’on garde,
+            qu’on déplace, qu’on redécouvre. Notre envie : vous aider à composer
+            un chez-vous singulier, à votre rythme.
+          </p>
+          <a href="#collection" class="text-link"
+            >Entrez dans notre univers
+            <span class="icon-arrow" aria-hidden="true"></span
+          ></a>
+        </div>
+      </section>
+      <section id="engagements" class="perks">
+        <div>
+          <b><span class="icon-arrow" aria-hidden="true"></span></b>
+          <h3>Une commande, simplement</h3>
+          <p>
+            Choisissez votre pièce et renseignez vos coordonnées.<br />Nous vous
+            contactons pour la confirmation.
+          </p>
+        </div>
+        <div>
+          <b>◇</b>
+          <h3>Le Maroc, à votre porte</h3>
+          <p>
+            Livraison à 39 DH partout au Maroc.<br />Offerte à partir de 800 DH
+            de commande.
+          </p>
+        </div>
+        <div>
+          <b>✦</b>
+          <h3>Le plaisir de recevoir</h3>
+          <p>
+            Réglez votre commande à la livraison.<br />Pas de paiement en ligne
+            à effectuer.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a class="logo" href="/">ArtDecor</a>
+        <p>Des pièces singulières. Une maison bien à vous.</p>
+      </div>
+      <div>
+        <a href="#collection">La collection</a
+        ><a href="#inspiration">Notre univers</a
+        ><a href="/admin">Espace gestion</a>
+      </div>
+      <small
+        >© <span id="year"></span> ArtDecor<br />La maison, autrement</small
+      >
+    </footer>
+    <dialog id="order-dialog" aria-labelledby="order-title">
+      <div class="dialog-head">
+        <h2 id="order-title">Votre <em>commande.</em></h2>
+        <button data-close="order-dialog" aria-label="Fermer">✕</button>
+      </div>
+      <p id="order-product"></p>
+      <form id="order-form">
+        <label
+          >Quantité<input
+            type="number"
+            name="quantity"
+            min="1"
+            max="99"
+            value="1"
+            required /></label
+        ><label
+          >Nom complet<input
+            name="customer"
+            autocomplete="name"
+            minlength="2"
+            maxlength="120"
+            required /></label
+        ><label
+          >Téléphone<input
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            pattern="[+0-9 \-]{9,18}"
+            maxlength="18"
+            placeholder="06 00 00 00 00"
+            required /></label
+        ><label
+          >Ville<input
+            name="city"
+            autocomplete="address-level2"
+            minlength="2"
+            maxlength="100"
+            required /></label
+        ><label
+          >Adresse complète<textarea
+            name="address"
+            autocomplete="street-address"
+            minlength="5"
+            maxlength="600"
+            required
+          ></textarea>
+        </label>
+        <div id="order-summary" aria-live="polite"></div>
+        <p class="muted">
+          Paiement à la livraison. Nous vous contacterons pour confirmer votre
+          commande. Vos coordonnées servent au traitement de votre demande.
+        </p>
+        <button class="button dark wide" type="submit">
+          Confirmer ma commande
+          <span class="icon-arrow" aria-hidden="true"></span>
+        </button>
+        <p id="order-error" class="error" role="alert"></p>
+      </form>
+      <div id="order-success" hidden role="status"></div>
+    </dialog>
+    <dialog id="product-dialog" aria-labelledby="product-title"></dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
