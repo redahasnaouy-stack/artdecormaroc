@@ -1,0 +1,18 @@
+{% assign selected = product.selected_or_first_available_variant %}
+<section class="product-page page-shell" data-product-section>
+  <div class="product-gallery">{% for image in product.images %}{% assign image_alt = image.alt | default: product.title %}{{ image | image_url: width: 1400 | image_tag: widths: '400, 700, 1000, 1400', sizes: '(max-width: 700px) 90vw, 48vw', loading: 'lazy', alt: image_alt }}{% else %}{{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}{% endfor %}</div>
+  <div class="product-copy"><a class="muted" href="{{ routes.all_products_collection_url }}">← La collection</a><div class="eyebrow">{{ product.type | escape }}</div><h1 class="product-heading">{{ product.title | escape }}</h1><p class="shop-price" data-price>{{ selected.price | money }}</p>
+    {% form 'product', product %}
+      {{ form.errors | default_errors }}
+      {% unless product.has_only_default_variant %}<label for="Variant-{{ section.id }}">Modèle</label>{% endunless %}
+      <select name="id" id="Variant-{{ section.id }}" data-variant{% if product.has_only_default_variant %} hidden{% endif %}>{% for variant in product.variants %}<option value="{{ variant.id }}" data-available="{{ variant.available }}" data-price="{{ variant.price | money | escape }}"{% if variant == selected %} selected{% endif %}>{{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} — Épuisé{% endunless %}</option>{% endfor %}</select>
+      <label class="quantity-label" for="Quantity-{{ section.id }}">Quantité<input id="Quantity-{{ section.id }}" name="quantity" type="number" value="1" min="1" step="1" required></label>
+      <input name="return_to" type="hidden" value="{{ routes.cart_url }}">
+      <button class="button dark wide" type="submit" name="add" data-add{% unless selected.available %} disabled{% endunless %}>{% if selected.available %}Ajouter au panier{% else %}Épuisé{% endif %}</button>
+      <p class="muted">{% if cart.taxes_included %}Taxes incluses. {% endif %}Frais de livraison calculés lors du paiement.{% if shop.shipping_policy.body != blank %} <a href="{{ shop.shipping_policy.url }}">Conditions de livraison</a>.{% endif %}</p>
+    {% endform %}
+    <div class="rte product-description">{{ product.description }}</div>
+  </div>
+</section>
+<script type="application/ld+json">{{ product | structured_data }}</script>
+{% schema %}{"name":"Fiche produit","settings":[]}{% endschema %}

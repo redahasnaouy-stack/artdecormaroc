@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero"
+    },
+    "collection": {
+      "type": "featured-collection"
+    },
+    "story": {
+      "type": "story"
+    },
+    "benefits": {
+      "type": "benefits",
+      "blocks": {
+        "detail": {
+          "type": "benefit",
+          "settings": {
+            "title": "Le sens du détail",
+            "text": "Des pièces choisies pour une maison singulière."
+          }
+        },
+        "inspiration": {
+          "type": "benefit",
+          "settings": {
+            "title": "Votre inspiration",
+            "text": "Des formes et des matières pour imaginer votre intérieur."
+          }
+        },
+        "order": {
+          "type": "benefit",
+          "settings": {
+            "title": "Une commande, simplement",
+            "text": "Retrouvez les modalités de livraison et de paiement au moment de commander."
+          }
+        }
+      },
+      "block_order": [
+        "detail",
+        "inspiration",
+        "order"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "collection",
+    "story",
+    "benefits"
+  ]
+}

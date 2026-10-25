@@ -1,0 +1,10 @@
+<section class="hero">
+  <div class="hero-copy"><div class="eyebrow"><span></span>{{ section.settings.eyebrow | escape }}</div><h1>{{ section.settings.heading | escape | newline_to_br }}<br><em>{{ section.settings.accent | escape }}</em></h1><p>{{ section.settings.description | escape }}</p><a class="button mauve" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} <span class="icon-arrow" aria-hidden="true"></span></a><div class="hero-note"><span class="note-line"></span>Objets choisis. Instants à vivre.</div><div class="hero-index"><span>01 /</span> LA MAISON, AUTREMENT</div></div>
+  <div class="hero-art">
+    {% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1800 | image_tag: widths: '480, 720, 1000, 1400, 1800', sizes: '(max-width: 580px) 88vw, 52vw', loading: 'eager', fetchpriority: 'high' }}{% else %}<img src="{{ 'living-room.jpg' | asset_url }}" alt="Salon lumineux aux matières naturelles" width="1400" height="1050" fetchpriority="high">{% endif %}
+    <div class="image-caption"><span>LES DÉTAILS CHANGENT TOUT.</span><span>ARTDECOR — INTÉRIEURS</span></div><div class="floating-label"><span class="label-star" aria-hidden="true">✦</span><div>Le beau se vit.<br><em>Il ne se regarde pas seulement.</em></div></div>
+  </div>
+</section>
+{% schema %}
+{"name":"Couverture mauve","settings":[{"type":"text","id":"eyebrow","label":"Surtitre","default":"L’ART DE SE SENTIR CHEZ SOI"},{"type":"textarea","id":"heading","label":"Titre","default":"Du caractère.\nDe la douceur."},{"type":"text","id":"accent","label":"Titre en lavande","default":"Votre signature."},{"type":"textarea","id":"description","label":"Description","default":"Des pièces singulières pour les intérieurs qui ont quelque chose à raconter. Composez le vôtre, un détail à la fois."},{"type":"image_picker","id":"image","label":"Photo de couverture"},{"type":"text","id":"button_label","label":"Texte du bouton","default":"Explorer la collection"},{"type":"url","id":"button_link","label":"Destination du bouton"}],"presets":[{"name":"Couverture mauve"}]}
+{% endschema %}

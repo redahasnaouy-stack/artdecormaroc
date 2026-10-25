@@ -1,0 +1,14 @@
+{% if section.settings.announcement != blank %}<div class="announcement">{{ section.settings.announcement | escape }}</div>{% endif %}
+<header>
+  <a class="logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} — Accueil"><span class="brand-mark" aria-hidden="true">A<span>✦</span></span>{{ section.settings.brand | escape }}<i>{{ section.settings.tagline | escape }}</i></a>
+  <nav aria-label="Navigation principale">
+    {% if section.settings.menu != blank %}
+      {% for link in section.settings.menu.links %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}
+    {% else %}<a href="{{ routes.all_products_collection_url }}">La collection</a><a href="{{ routes.search_url }}">Rechercher</a>{% endif %}
+  </nav>
+  <details class="mobile-menu"><summary aria-label="Ouvrir le menu">Menu</summary><div>{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% else %}<a href="{{ routes.all_products_collection_url }}">La collection</a>{% endfor %}<a href="{{ routes.search_url }}">Rechercher</a>{% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">Mon compte</a>{% endif %}</div></details>
+  <a class="shop-cart" href="{{ routes.cart_url }}" aria-label="Panier : {{ cart.item_count }} articles">Panier <span>{{ cart.item_count }}</span></a>
+</header>
+{% schema %}
+{"name":"En-tête ArtDecor","settings":[{"type":"text","id":"brand","label":"Nom affiché","default":"ArtDecor"},{"type":"text","id":"tagline","label":"Signature","default":"LA MAISON, AUTREMENT"},{"type":"text","id":"announcement","label":"Annonce","default":"Des pièces singulières. Une maison bien à vous."},{"type":"link_list","id":"menu","label":"Menu principal"}]}
+{% endschema %}
